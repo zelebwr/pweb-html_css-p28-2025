@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: "Auto Assign Reviewer"
-        uses: "auto-assign-action@v2"
+        uses: "auto-assign/auto-assign-action@v2"
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           

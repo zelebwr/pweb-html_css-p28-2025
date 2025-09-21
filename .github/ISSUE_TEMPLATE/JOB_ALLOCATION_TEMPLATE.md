@@ -1,7 +1,7 @@
 ---
 name: "📝 New Task Allocation"
 about: "Use this template to assign a new job or task to a team member."
-title: "task: [BRIEF TASK DESCRIPTION]"
+title: "[feat/fix/etc.]: [TASK SHORT BRIEF]"
 labels: "task, to-do"
 assignees: ""
 ---

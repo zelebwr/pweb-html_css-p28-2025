@@ -3,6 +3,13 @@ name: "Auto Assign Reviewer"
 on:
   pull_request:
     types: [opened, ready_for_review]
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
 
 jobs:
   add-reviewer:

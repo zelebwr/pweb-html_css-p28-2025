@@ -28,6 +28,46 @@
 
         <!-- 
         =====================================
+        HEADER & NAVIGATION
+        - This header contains the site's main navigation.
+        - It's a copy of the navbar from index.html to ensure a consistent
+        user experience across all pages.
+        - NOTE: This is @oooryzaaa's job desk on styling the navbar overall looks,
+          meanwhile @HikariReiziq is in charge of the responsiveness and interactivity
+        =====================================
+        -->
+        <header class="main-header">
+            <nav class="navbar">
+                <div class="container nav-container">
+                    <a href="index.html" class="nav-brand">ZeZiZa</a>
+
+                    <input
+                        type="checkbox"
+                        class="hamburger-toggle"
+                        id="hamburger-toggle"
+                    />
+                    <label for="hamburger-toggle" class="hamburger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cv_template.html" class="nav-link">Curriculum Vitae</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        <!-- 
+        =====================================
         CV CONTAINER
         - This is the main container for the cv so that there would be an "inner box" that is separate from the body
         - This should be a two-column layout on desktop that stacks in to a single column on mobile

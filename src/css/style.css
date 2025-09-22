@@ -75,6 +75,10 @@ body {
   background-color: var(--primary-medium);
 }
 
+#hamburger-toggle {
+  display: none; /* Hide the checkbox */
+}
+
 /* =====================================
    LAYOUT UTAMA CV
    Menggunakan Grid untuk membuat 2 kolom: sidebar dan konten utama.
@@ -181,8 +185,8 @@ cv-profile {
 }
 
 /* =====================================
-   KONTEN UTAMA (BAGIAN KANAN)
-   ===================================== */
+KONTEN UTAMA (BAGIAN KANAN)
+===================================== */
 .cv-main-content {
   background-color: var(--white);
   padding: 2.5rem;
@@ -253,22 +257,65 @@ cv-profile {
 
 /* Mobile (lebar layar di bawah 768px) */
 @media (max-width: 768px) {
-  .nav-menu {
-    /* Bagian hamburger menu biarkan saja, karena sudah fungsional */
-    position: fixed;
-    left: -100%;
-    top: 70px;
+  .hamburger-icon {
+    display: flex;
     flex-direction: column;
-    background-color: #1c3c53;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+  }
+  
+  /* Line Style as Icon */
+  .hamburger-icon span {
+    display: block;
     width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    padding: 2rem 0;
+    height: 3px;
+    background-color: var(--background);
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Hide desktop menu */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px; /* Position below navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-dark);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
     gap: 0;
   }
 
   .nav-item {
-    margin: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: 1rem;
+  }
+
+  /* --- Checkbox Logic --- */
+  
+  /* Show menu when checkbox is checked */
+  .hamburger-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+
+  /* Animate the hamburger to an 'X' when checked */
+  .hamburger-toggle:checked ~ .hamburger-icon span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+  }
+  .hamburger-toggle:checked ~ .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-toggle:checked ~ .hamburger-icon span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
   }
 
   .cv-container {
@@ -277,7 +324,7 @@ cv-profile {
 
   .cv-sidebar,
   .cv-main-content {
-    padding: 1.5rem; /* Mengurangi padding di layar kecil */
+    padding: 1.5rem;
   }
 
   .cv-section__heading {

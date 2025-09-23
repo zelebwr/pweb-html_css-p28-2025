@@ -21,6 +21,7 @@ body {
   line-height: 1.6;
   color: var(--primary-dark);
   background-color: var(--background);
+  text-align: justify;
 }
 
 /* =====================================
@@ -344,7 +345,6 @@ KONTEN UTAMA (BAGIAN KANAN)
   --accent-light: #d2c1b7;
   --background: #f8f3ef;
   
-  
 }
 
 * {
@@ -619,6 +619,11 @@ body {
 }
 
 .social-icon-link:hover {
+  color: var(--accent-light);
+  transform: scale(1.2);
+}
+
+.index-icon:hover {
   color: var(--primary-medium);
   transform: scale(1.2);
 }

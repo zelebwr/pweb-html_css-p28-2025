@@ -1,4 +1,4 @@
-2# 🚀 Contributing to This Project
+# 🚀 Contributing to This Project
 
 This is a document for the guideline that you need to follow when wanting to contribute to this repo.
 

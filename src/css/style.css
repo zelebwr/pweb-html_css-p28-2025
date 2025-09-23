@@ -619,6 +619,11 @@ body {
 }
 
 .social-icon-link:hover {
+  color: var(--accent-light);
+  transform: scale(1.2);
+}
+
+.index-icon:hover {
   color: var(--primary-medium);
   transform: scale(1.2);
 }
